@@ -1,0 +1,61 @@
+<html>
+
+<head>
+  <title> CAR DENT DETECTION </title>
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-3">
+        <!-- <div class="fileinput fileinput-new" data-provides="fileinput">
+              <div class="fileinput-preview thumbnail" data-trigger="fileinput" id="window"></div>
+              <div> -->
+                <h2>Car Dent Detection</h2>
+        <form action="assessment" method="POST" enctype="multipart/form-data" class="form-inline">
+          <!-- <span class="btn btn-default btn-file">
+                    <span class="fileinput-new">Select Image</span>
+                    <span class="fileinput-exists">Change</span>
+                    <input type="file" id="filename" name="file">
+                  </span>
+                  <button type="submit" class="btn btn-default fileinput-exists" id="analyze" onclick="loading();">Submit</button> -->
+          <div class="col-md-6">
+            <input type="file" class="form-control" id="images" name="images" multiple/>
+            
+          </div>
+          <div class="col-md-4">
+              <button type="button" class="btn btn-labeled btn-primary" id="uploadImage"> <span class="btn-label"><i class="glyphicon glyphicon-upload"></i> </span>Upload</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-3">
+        <div class="row" id="image_preview"></div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+          <div class="row" id="image_gif">
+            <img src="ajax-loader.gif" alt="Loading....">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-xs-6 col-xs-offset-3">
+            <div class="row" id="success_text">
+              <h3>Dent has been identified.</h3>
+            </div>
+          </div>
+        </div>
+  </div>
+
+</body>
+
+</html>
